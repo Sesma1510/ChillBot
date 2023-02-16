@@ -1,12 +1,12 @@
+require("dotenv").config;
+
 module.exports = {
-  TOKEN:
-    "MTA3NDEzMzA0MDUyMTAzNTg0Ng.GIsEu1.OZWbBb7BSQVEpTTZ9Dvo_Zl_nzHUjMOTA8QzGc",
-  ownerID: ["273627191424843776"], //write your discord user id. example: ["id"] or ["id1","id2"]
+  TOKEN: process.env.TOKEN,
+  ownerID: [process.env.ownerID], //write your discord user id. example: ["id"] or ["id1","id2"]
   botInvite:
     "https://discord.com/api/oauth2/authorize?client_id=1074133040521035846&permissions=277028603968&scope=bot%20applications.commands", //write your discord bot invite.
   supportServer: "", //write your discord bot support server invite.
-  mongodbURL:
-    "mongodb+srv://Sesma:jux!tuv0ujc1QRK_jrj@cluster0.rdgae77.mongodb.net/?retryWrites=true&w=majority", //write your mongodb url.
+  mongodbURL: process.env.MONGO_URI, //write your mongodb url.
   status: "Estoy Chill",
   commandsDir: "./commands", //Please don't touch
   language: "en", //en, tr, nl, pt, fr, ar, zh_TW, it
